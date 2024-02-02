@@ -1,6 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;
-
-700&family=Source+Sans+Pro:wght@400;700&display=swap");
 *,
 ::after,
 ::before {
@@ -230,7 +227,7 @@ ul[class] {
 }
 
 body {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-size: calc(
 		14px + 2 * ((100vw - 320px) / 1600)
 	);
@@ -308,7 +305,7 @@ main.page {
   font-size: calc(
 		18px + 4 * ((100vw - 320px) / 1600)
 	);
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   padding-left: 40px;
   margin-top: 10px;
   max-width: 500px;
@@ -540,7 +537,6 @@ main.page {
 
 .section-route__img {
   max-width: 100%;
-  width: 50%;
   height: auto;
 }
 
@@ -634,7 +630,7 @@ main.page {
   position: relative;
   white-space: nowrap;
   cursor: pointer;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-weight: 400;
   font-size: 14px;
 }
@@ -659,13 +655,13 @@ main.page {
   right: 0;
   width: 25px;
   height: 8px;
-  background: url("../../img/arrow.svg") center/100% 100% no-repeat;
+  background: url("../img/arrow.svg") center/100% 100% no-repeat;
   transform: translateY(-50%);
   transition: right 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .route-tabs__link b {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-size: 16px;
   font-weight: 700;
   margin-right: 18px;
@@ -693,7 +689,7 @@ main.page {
 
 .route-tabs__item {
   display: none;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   flex-direction: column;
   height: 100%;
 }
@@ -759,7 +755,7 @@ main.page {
   justify-content: space-between;
   align-items: center;
   gap: 30px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   width: 100%;
   flex-wrap: wrap;
 }
@@ -799,7 +795,7 @@ main.page {
   border: 1px solid #0061BF;
   flex: 1 1 auto;
   display: flex;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-size: calc(
 		16px + 2 * ((100vw - 320px) / 1600)
 	);
@@ -807,7 +803,7 @@ main.page {
 }
 
 .route-full__input::-moz-placeholder {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-size: calc(
 		16px + 2 * ((100vw - 320px) / 1600)
 	);
@@ -817,7 +813,7 @@ main.page {
 }
 
 .route-full__input::placeholder {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-size: calc(
 		16px + 2 * ((100vw - 320px) / 1600)
 	);
@@ -843,13 +839,11 @@ main.page {
   gap: 40px;
 }
 
-.no-webp .section-advantages::before, .no-webp .section-advantages::after{
-  background: url("../../img/bgCircle.png") center/contain no-repeat; }
-
 .section-advantages::before,
 .section-advantages::after {
   content: "";
   position: absolute;
+  background: url("../img/bgCircle.svg") center/contain no-repeat;
   width: 100px;
   height: 100px;
   z-index: -1;
@@ -887,7 +881,7 @@ main.page {
 }
 
 .section-advantages__title {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   text-transform: uppercase;
   margin-bottom: 10px;
   font-size: calc(
@@ -898,7 +892,7 @@ main.page {
 
 .section-advantages__text {
   color: #fff;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-size: calc(
 		14px + 2 * ((100vw - 320px) / 1600)
 	);
@@ -947,7 +941,7 @@ main.page {
   position: relative;
   display: flex;
   flex-direction: column;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   position: relative;
 }
 
@@ -1095,7 +1089,7 @@ main.page {
 .section-includes {
   position: relative;
   color: #fff;
-  font-family: "Source Sans Pro";
+  font-family: "Source Sans 3";
   font-weight: 400;
   width: 100%;
   overflow: hidden;
@@ -1154,9 +1148,6 @@ main.page {
      border-image: linear-gradient(to bottom right, #fff, transparent) 1;
 }
 
-.no-webp .includes-content__item::before{
-  background: url("../img/bgCircle.png") center/contain no-repeat; }
-
 .includes-content__item::before {
   content: "";
   position: absolute;
@@ -1164,6 +1155,7 @@ main.page {
   bottom: -15px;
   width: 60px;
   height: 60px;
+  background: url("../img/bgCircle.svg") center/contain no-repeat;
 }
 
 .includes-content__item .includes__animItem1 {
@@ -1409,11 +1401,11 @@ main.page {
   position: relative;
 }
 
-.liner-cabins__item:nth-child(even) img {
+.liner-cabins__item:nth-child(even) .liner-cabins__img {
   order: 2;
 }
 
-.no-webp .liner-cabins__item:nth-child(even)::before{
+.no-webp .liner-cabins__item:nth-child(even)::before {
   background: url("../img/liner-decor.png") center/contain no-repeat; }
 
 .liner-cabins__item:nth-child(even)::before {
@@ -1542,7 +1534,7 @@ main.page {
 }
 
 .coordinator__post {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-weight: 700;
   font-size: calc(
 		14px + 2 * ((100vw - 320px) / 1600)
@@ -1551,7 +1543,7 @@ main.page {
 }
 
 .coordinator__text {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-weight: 400;
   font-size: calc(
 		14px + 2 * ((100vw - 320px) / 1600)
@@ -1641,7 +1633,7 @@ main.page {
 }
 
 .coord-data__text {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-weight: 400;
   font-size: calc(
 		14px + 2 * ((100vw - 320px) / 1600)
@@ -1657,9 +1649,6 @@ main.page {
      border-image: linear-gradient(to bottom right, #FFC614, transparent) 1;
 }
 
-.no-webp .reviews-slider__item::before{
-  background: url("../img/liner-decor.png"); }
-
 .reviews-slider__item::before {
   content: "";
   position: absolute;
@@ -1667,9 +1656,11 @@ main.page {
   right: 0;
   width: 60px;
   height: 60px;
+  background: url("../img/reviews-decor.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  opacity: 0.4;
 }
 
 .reviews-slider__user {
@@ -1678,7 +1669,7 @@ main.page {
 }
 
 .reviews-slider__text {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-size: calc(
 		14px + 2 * ((100vw - 320px) / 1600)
 	);
@@ -1717,7 +1708,7 @@ main.page {
 }
 
 .slider-user__text {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-size: calc(
 		14px + 2 * ((100vw - 320px) / 1600)
 	);
@@ -1939,7 +1930,7 @@ main.page {
     display: block;
   }
 
-  .no-webp .section-hero{
+  .no-webp .section-hero {
     background: url("../img/section-hero-big.png") left bottom/cover no-repeat; }
 
   .section-hero::before {
@@ -2059,7 +2050,7 @@ main.page {
     align-items: center;
   }
 
-  .liner-cabins__item img {
+  .liner-cabins__item .liner-cabins__img {
     order: 1;
   }
 
@@ -2107,14 +2098,9 @@ main.page {
   }
 }
 
-.webp .section-advantages::before, .webp .section-advantages::after{ background: url(../../img/bgCircle.webp) center/contain no-repeat; }
+.webp .liner-cabins__item:nth-child(even)::before { background: url(../img/liner-decor.webp) center/contain no-repeat; }
 
-.webp .includes-content__item::before{ background: url(../img/bgCircle.webp) center/contain no-repeat; }
+@media (max-width: 991px) {
 
-.webp .liner-cabins__item:nth-child(even)::before{ background: url(../img/liner-decor.webp) center/contain no-repeat; }
-
-.webp .reviews-slider__item::before{ background: url(../img/liner-decor.webp); }
-
-@media (max-width: 991px){
-  .webp .section-hero{ background: url(../img/section-hero-big.webp) left bottom/cover no-repeat; }
+  .webp .section-hero { background: url(../img/section-hero-big.webp) left bottom/cover no-repeat; }
 }
