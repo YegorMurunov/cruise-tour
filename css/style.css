@@ -579,7 +579,6 @@ main.page {
 
 .route-plates__item.item3 {
   grid-row: 2;
-  min-width: 230px;
 }
 
 .route-plates__text {
@@ -1424,14 +1423,17 @@ main.page {
 }
 
 .liner-cabins__img {
-  max-width: 560px;
   width: 50%;
 }
 
+.liner-cabins__img picture,
+.liner-cabins__img img {
+  width: 100%;
+}
+
 .liner-cabins__text {
-  min-width: 300px;
   padding-top: 50px;
-  flex: 1 1 auto;
+  width: 50%;
   font-weight: 400;
   font-size: calc(
 		14px + 2 * ((100vw - 320px) / 1600)
@@ -1865,7 +1867,7 @@ main.page {
   }
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 1090px) {
   .section-route__plates {
     display: flex;
     gap: 30px;
@@ -2055,15 +2057,14 @@ main.page {
   }
 
   .liner-cabins__img {
+    max-width: 560px;
     width: 100%;
   }
 
   .liner-cabins__text {
     padding-top: 0;
-  }
-
-  .liner-cabins__text {
     max-width: 560px;
+    width: 100%;
   }
 }
 
