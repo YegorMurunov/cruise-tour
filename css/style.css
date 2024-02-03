@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@400;700&display=swap");
 *,
 ::after,
 ::before {
@@ -82,13 +83,16 @@ ul[class] {
   background: linear-gradient(to left, rgb(255, 255, 255), rgba(255, 255, 255, 0));
 }
 
-.btn[disabled] {
+.btn[disabled],
+.btn.disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
 
 .btn[disabled]:hover::before,
-.btn[disabled]:hover::after {
+.btn[disabled]:hover::after,
+.btn.disabled:hover::before,
+.btn.disabled:hover::after {
   width: 0;
 }
 
@@ -1404,7 +1408,7 @@ main.page {
   order: 2;
 }
 
-.no-webp .liner-cabins__item:nth-child(even)::before {
+.no-webp .liner-cabins__item:nth-child(even)::before{
   background: url("../img/liner-decor.png") center/contain no-repeat; }
 
 .liner-cabins__item:nth-child(even)::before {
@@ -1932,7 +1936,7 @@ main.page {
     display: block;
   }
 
-  .no-webp .section-hero {
+  .no-webp .section-hero{
     background: url("../img/section-hero-big.png") left bottom/cover no-repeat; }
 
   .section-hero::before {
@@ -2099,9 +2103,8 @@ main.page {
   }
 }
 
-.webp .liner-cabins__item:nth-child(even)::before { background: url(../img/liner-decor.webp) center/contain no-repeat; }
+.webp .liner-cabins__item:nth-child(even)::before{ background: url(../img/liner-decor.webp) center/contain no-repeat; }
 
-@media (max-width: 991px) {
-
-  .webp .section-hero { background: url(../img/section-hero-big.webp) left bottom/cover no-repeat; }
+@media (max-width: 991px){
+  .webp .section-hero{ background: url(../img/section-hero-big.webp) left bottom/cover no-repeat; }
 }

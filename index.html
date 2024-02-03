@@ -2,13 +2,10 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Чарующий Восток</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@400;700&display=swap&_v=20240202195315" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.min.css?_v=20240202195315" type="text/css" />
+    <link rel="stylesheet" href="css/style.min.css?_v=20240203204506" type="text/css">
 </head>
 
 <body>
@@ -18,12 +15,12 @@
                 <div class="header__soc header-soc">
                     <div class="header-soc__item">
                         <a href="#">
-                            <img src="img/facebook.svg" alt="facebook" />
+                            <img src="img/facebook.svg" alt="facebook">
                         </a>
                     </div>
                     <div class="header-soc__item">
                         <a href="#">
-                            <img src="img/instagram.svg" alt="instagram" />
+                            <img src="img/instagram.svg" alt="instagram">
                         </a>
                     </div>
                 </div>
@@ -35,13 +32,14 @@
                 </div>
             </div>
         </header>
-
         <main class="page">
             <section class="section section-hero">
                 <picture>
-                    <source srcset="./img/section-hero-big.webp" type="image/webp"><img src="./img/section-hero-big.png" alt="" class="section-hero__bgImage1" />
+                    <source srcset="./img/section-hero-big.webp" type="image/webp"><img src="./img/section-hero-big.png" alt="" class="section-hero__bgImage1">
                 </picture>
-                <img src="./img/section-hero-small.png" alt="" class="section-hero__bgImage2" />
+                <picture>
+                    <source srcset="./img/section-hero-small.webp" type="image/webp"><img src="./img/section-hero-small.png" alt="" class="section-hero__bgImage2">
+                </picture>
                 <div class="section-hero__container">
                     <ul class="section-hero__advantages advantages">
                         <li class="advantages__li">
@@ -85,12 +83,12 @@
                     <div class="section-hero__center">
                         <div class="section-hero__date">02.02.2022 - 02.02.2022</div>
                         <h1 class="section-hero__title">
-                            Чарующий Восток<br />за 7 дней путишествия<br />с комфортом
+                            Чарующий Восток<br>за 7 дней путишествия<br>с комфортом
                         </h1>
                         <div class="section-hero__subtitle">Круизный пакетный тур по ОАЭ</div>
                         <a href="#route" class="btn anchor-link">Маршрут</a>
                         <div class="section-hero__price">
-                            Стоимость от <br /><b>33 333</b> грн
+                            Стоимость от <br><b>33 333</b> грн
                         </div>
                     </div>
                     <nav class="section-hero__nav hero-nav" data-da=".header__menu-body,991,1">
@@ -117,7 +115,6 @@
                     </nav>
                 </div>
             </section>
-
             <section class="section section-route" id="route">
                 <div class="section-route__container">
                     <h2 class="section__title blue animWrapper" data-delay="200">
@@ -129,9 +126,11 @@
                     </h2>
                     <div class="section__subtitle">ВАС ЖДЕТ 5 ГОРОДОВ В МАРШРУТЕ</div>
                     <div class="section__item section-route__itemMap">
-                        <picture>
-                            <source srcset="img/map.webp" type="image/webp"><img src="img/map.png" alt="map" class="section-route__img" />
-                        </picture>
+                        <div class="section-route__img">
+                            <picture>
+                                <source srcset="img/map.webp" type="image/webp"><img src="img/map.png" alt="map">
+                            </picture>
+                        </div>
                         <div class="section-route__info">
                             <div class="section-route__breadCrumbs">
                                 ДУБАЙ / АБУ-ДАБИ / о. СИР-БАНИ-ЯС / ДАМАМ / ДОХА
@@ -614,16 +613,15 @@
                                 *Для скачивания введите Ваш номер телефона.
                             </div>
                         </div>
-                        <div class="route-full__right">
-                            <input class="route-full__input" placeholder="Введите Ваш номер телефона" type="text" id="phoneInput" maxlength="13" />
-                            <a class="btn btn-blue route-full__btn" href="#" disabled id="btnForPhone">
+                        <form class="route-full__right">
+                            <input class="route-full__input" placeholder="Введите Ваш номер телефона" type="text" id="phoneInput" maxlength="13">
+                            <a class="btn btn-blue route-full__btn disabled" href="#" id="btnForPhone">
                                 Скачать PDF
                             </a>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </section>
-
             <section class="section section-advantages" id="advantages">
                 <div class="section__container">
                     <h2 class="section__title blue animWrapper" data-delay="200">
@@ -724,11 +722,11 @@
                                 </div>
                                 <h4 class="cabins__title">Внутрення каюта</h4>
                                 <div class="cabins__text">
-                                    Площадь 15 кв.м.<br />Макc. вместимость 4 чел.<br />Каюта в
+                                    Площадь 15 кв.м.<br>Макc. вместимость 4 чел.<br>Каюта в
 						класическом стиле в пастельных тонах.
                                 </div>
                                 <picture>
-                                    <source srcset="img/cabin1.webp" type="image/webp"><img src="img/cabin1.png" alt="Каюта" class="cabins__img" />
+                                    <source srcset="img/cabin1.webp" type="image/webp"><img src="img/cabin1.png" alt="Каюта" class="cabins__img">
                                 </picture>
                                 <div class="cabins__info cabin-info">
                                     <div class="cabin-info__title">В каюте:</div>
@@ -752,11 +750,11 @@
                             <div class="cabins__wrapper">
                                 <h4 class="cabins__title">Каюта с окном</h4>
                                 <div class="cabins__text">
-                                    Площадь 15 кв.м.<br />Макc. вместимость 4 чел.<br />Каюта в
+                                    Площадь 15 кв.м.<br>Макc. вместимость 4 чел.<br>Каюта в
 						класическом стиле в пастельных тонах.
                                 </div>
                                 <picture>
-                                    <source srcset="img/cabin2.webp" type="image/webp"><img src="img/cabin2.png" alt="Каюта" class="cabins__img" />
+                                    <source srcset="img/cabin2.webp" type="image/webp"><img src="img/cabin2.png" alt="Каюта" class="cabins__img">
                                 </picture>
                                 <div class="cabins__info cabin-info">
                                     <div class="cabin-info__title">В каюте:</div>
@@ -786,11 +784,11 @@
                                 </div>
                                 <h4 class="cabins__title">Каюта с балконом</h4>
                                 <div class="cabins__text">
-                                    Площадь 15 кв.м.<br />Макc. вместимость 4 чел.<br />Каюта в
+                                    Площадь 15 кв.м.<br>Макc. вместимость 4 чел.<br>Каюта в
 						класическом стиле в пастельных тонах.
                                 </div>
                                 <picture>
-                                    <source srcset="img/cabin3.webp" type="image/webp"><img src="img/cabin3.png" alt="Каюта" class="cabins__img" />
+                                    <source srcset="img/cabin3.webp" type="image/webp"><img src="img/cabin3.png" alt="Каюта" class="cabins__img">
                                 </picture>
                                 <div class="cabins__info cabin-info">
                                     <div class="cabin-info__title">В каюте:</div>
@@ -812,12 +810,11 @@
                         </div>
                     </div>
                     <div class="section__item section-prices__info">
-                        *Предбронь на сутки без предоплаты. Наш специалист свяжется <br />с Вами,
+                        *Предбронь на сутки без предоплаты. Наш специалист свяжется <br>с Вами,
 			расскажет все детали и ответит на Ваши вопросы.
                     </div>
                 </div>
             </section>
-
             <section class="section section-includes blue" id="includes">
                 <div class="section__container">
                     <div class="section__item">
@@ -833,11 +830,11 @@
                         </div>
                     </div>
                     <picture>
-                        <source srcset="img/includes2.webp" type="image/webp"><img src="img/includes2.png" class="section-includes__img" alt="cruise" />
+                        <source srcset="img/includes2.webp" type="image/webp"><img src="img/includes2.png" class="section-includes__img" alt="cruise">
                     </picture>
                     <div class="section__item section-includes__content includes-content">
                         <picture>
-                            <source srcset="img/includes1.webp" type="image/webp"><img src="img/includes1.png" class="includes-content__img" />
+                            <source srcset="img/includes1.webp" type="image/webp"><img src="img/includes1.png" alt="photo" class="includes-content__img">
                         </picture>
                         <div class="includes-content__item">
                             <div class="includes__animItem1 animWrapper" data-delay="600">
@@ -914,7 +911,6 @@
                     <a href="#" class="btn includes-content__btn">Оставить заявку</a>
                 </div>
             </section>
-
             <section class="section section-liner" id="liner">
                 <div class="section__container">
                     <div class="section__item">
@@ -929,7 +925,9 @@
                     </div>
 
                     <div class="section__item section-liner__hero liner-hero">
-                        <img src="img/liner-hero.png" alt="liner" class="liner-hero__img liner-hero__item" />
+                        <picture>
+                            <source srcset="img/liner-hero.webp" type="image/webp"><img src="img/liner-hero.png" alt="liner" class="liner-hero__img liner-hero__item">
+                        </picture>
                         <div class="liner-hero__item liner-hero__data liner-data anim-numbers__wrapper">
                             <div class="liner-data__item">
                                 <div class="liner-data__animItem animWrapper" data-delay="200">
@@ -941,7 +939,7 @@
                                         <line x1="70.5" y1="2.18557e-08" x2="70.5" y2="65" stroke="#0061BF" />
                                     </svg>
                                 </div>
-                                Год спуска на воду<br /><span class="anim-numbers__item">2021</span>
+                                Год спуска на воду<br><span class="anim-numbers__item">2021</span>
                             </div>
                             <div class="liner-data__item">
                                 <div class="liner-data__animItem animItem2 animWrapper" data-delay="400">
@@ -951,7 +949,7 @@
                                         <line x1="30" y1="14.5" x2="160" y2="14.5" stroke="#0061BF" />
                                     </svg>
                                 </div>
-                                Количество гостей<br /><span class="anim-numbers__item">5682</span>
+                                Количество гостей<br><span class="anim-numbers__item">5682</span>
                             </div>
                             <div class="liner-data__item">
                                 <div class="liner-data__animItem animItem3 animWrapper" data-delay="600">
@@ -963,7 +961,7 @@
                                         <line x1="71.5" y1="14" x2="71.5" y2="79" stroke="#0061BF" />
                                     </svg>
                                 </div>
-                                Длина судна (м)<br /><span class="anim-numbers__item">368</span>
+                                Длина судна (м)<br><span class="anim-numbers__item">368</span>
                             </div>
                         </div>
                         <div class="liner-hero__item liner-hero__text">
@@ -994,7 +992,7 @@
                     </div>
 
                     <div class="section__item section-liner-video liner-video">
-                        <img src="img/liner-photo.png" alt="liner" class="lazy-video" data-src="https://www.youtube.com/embed/85a0e62bP2E" />
+                        <img src="img/liner-photo.png" alt="liner" class="lazy-video" data-src="https://www.youtube.com/embed/85a0e62bP2E">
                         <!-- <iframe
 				src="https://www.youtube.com/embed/85a0e62bP2E"
 				title="YouTube video player"
@@ -1008,7 +1006,7 @@
                         <div class="liner-cabins__item">
                             <div class="liner-cabins__img">
                                 <picture>
-                                    <source srcset="img/liner-cabins1.webp" type="image/webp"><img src="img/liner-cabins1.png" alt="" />
+                                    <source srcset="img/liner-cabins1.webp" type="image/webp"><img src="img/liner-cabins1.png" alt="Каюта 1">
                                 </picture>
                             </div>
                             <div class="liner-cabins__text">
@@ -1027,7 +1025,7 @@
                         <div class="liner-cabins__item">
                             <div class="liner-cabins__img">
                                 <picture>
-                                    <img src="img/liner-cabins2.png" alt="" />
+                                    <img src="img/liner-cabins2.png" alt="Каюта 2">
                                 </picture>
                             </div>
                             <div class="liner-cabins__text">
@@ -1052,7 +1050,7 @@
                         <div class="liner-cabins__item">
                             <div class="liner-cabins__img">
                                 <picture>
-                                    <source srcset="img/liner-cabins3.webp" type="image/webp"><img src="img/liner-cabins3.png" alt="" />
+                                    <source srcset="img/liner-cabins3.webp" type="image/webp"><img src="img/liner-cabins3.png" alt="Каюта 3">
                                 </picture>
                             </div>
                             <div class="liner-cabins__text">
@@ -1078,7 +1076,6 @@
                     </div>
                 </div>
             </section>
-
             <section class="section section-coordinator">
                 <div class="section__container">
                     <div class="section__item">
@@ -1090,12 +1087,14 @@
                             КООРДИНАТОР
                         </h2>
                         <div class="section__subtitle">
-                            НАШ СПЕЦИАЛИСТ БУДЕТ СОПРОВОЖДАТЬ ВАС<br />НА ВСЕХ ЭТАПАХ ТУРА
+                            НАШ СПЕЦИАЛИСТ БУДЕТ СОПРОВОЖДАТЬ ВАС<br>НА ВСЕХ ЭТАПАХ ТУРА
                         </div>
                     </div>
                     <div class="section__item section-coordinator__content">
                         <div class="section-coordinator__blockImg">
-                            <img src="img/coordinator.png" alt="координатор Слободян Лариса Ивановна" />
+                            <picture>
+                                <source srcset="img/coordinator.webp" type="image/webp"><img src="img/coordinator.png" alt="координатор Слободян Лариса Ивановна">
+                            </picture>
                             <div class="section-coordinator__circle animWrapper" data-delay="200">
                                 <svg width="30" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="15" cy="15" r="14" stroke="#0061BF" stroke-width="2" />
@@ -1161,7 +1160,6 @@
                     </div>
                 </div>
             </section>
-
             <section class="section section-reviews" id="reviews">
                 <div class="section__container">
                     <h2 class="section__title dark animWrapper" data-delay="200">
@@ -1177,11 +1175,13 @@
                         <div class="swiper-wrapper">
                             <div class="reviews-slider__item swiper-slide">
                                 <div class="reviews-slider__user slider-user">
-                                    <img src="img/review-2.jpg" alt="Надежда Гоян" class="slider-user__img" />
+                                    <picture>
+                                        <source srcset="img/review-2.webp" type="image/webp"><img src="img/review-2.jpg" alt="Надежда Гоян" class="slider-user__img">
+                                    </picture>
                                     <div class="slider-user__textBlock">
                                         <div class="slider-user__name">Надежда Гоян</div>
                                         <div class="slider-user__text">
-                                            Июль, 2020<br />Средиземноморье<br />Лайнер Costa Diadema
+                                            Июль, 2020<br>Средиземноморье<br>Лайнер Costa Diadema
                                         </div>
                                     </div>
                                 </div>
@@ -1200,11 +1200,13 @@
                             </div>
                             <div class="reviews-slider__item swiper-slide">
                                 <div class="reviews-slider__user slider-user">
-                                    <img src="img/review-2.jpg" alt="Надежда Гоян" class="slider-user__img" />
+                                    <picture>
+                                        <source srcset="img/review-2.webp" type="image/webp"><img src="img/review-2.jpg" alt="Надежда Гоян" class="slider-user__img">
+                                    </picture>
                                     <div class="slider-user__textBlock">
                                         <div class="slider-user__name">Надежда Гоян</div>
                                         <div class="slider-user__text">
-                                            Июль, 2020<br />Средиземноморье<br />Лайнер Costa Diadema
+                                            Июль, 2020<br>Средиземноморье<br>Лайнер Costa Diadema
                                         </div>
                                     </div>
                                 </div>
@@ -1223,11 +1225,13 @@
                             </div>
                             <div class="reviews-slider__item swiper-slide">
                                 <div class="reviews-slider__user slider-user">
-                                    <img src="img/review-2.jpg" alt="Надежда Гоян" class="slider-user__img" />
+                                    <picture>
+                                        <source srcset="img/review-2.webp" type="image/webp"><img src="img/review-2.jpg" alt="Надежда Гоян" class="slider-user__img">
+                                    </picture>
                                     <div class="slider-user__textBlock">
                                         <div class="slider-user__name">Надежда Гоян</div>
                                         <div class="slider-user__text">
-                                            Июль, 2020<br />Средиземноморье<br />Лайнер Costa Diadema
+                                            Июль, 2020<br>Средиземноморье<br>Лайнер Costa Diadema
                                         </div>
                                     </div>
                                 </div>
@@ -1249,7 +1253,6 @@
                     </div>
                 </div>
             </section>
-
         </main>
 
         <footer class="footer">
@@ -1261,7 +1264,7 @@
 
 
     </div>
-    <script src="js/script.min.js?_v=20240202195315"></script>
+    <script src="js/script.min.js?_v=20240203204506"></script>
 
 </body>
 
