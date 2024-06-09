@@ -1,0 +1,94 @@
+body {
+	font-family: 'Source Sans 3', sans-serif;
+	@include adaptiveValue('font-size', 16, 14);
+	font-weight: 400;
+	color: $dark;
+	background-color: $white;
+	position: relative;
+	scroll-behavior: smooth;
+
+	&.lock {
+		overflow: hidden;
+	}
+}
+
+[class*='__container'],
+.container {
+	// теперь не нужно использовать класс container
+	max-width: $containerWidth;
+	margin: 0 auto;
+	padding: 0 $containerPadding;
+}
+
+#wrapper {
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+main.page {
+	flex: 1 1 auto;
+}
+
+.section {
+	position: relative;
+	margin-top: 60px;
+	padding-top: 65px;
+	@include adaptiveValue('margin-top', 60, 30);
+	@include adaptiveValue('padding-top', 65, 35);
+
+	&.blue {
+		background-color: $blue;
+	}
+
+	&__title {
+		font-family: 'Playfair Display', sans-serif;
+		@include adaptiveValue('font-size', 36, 26);
+		text-transform: uppercase;
+		font-weight: 700;
+		color: #fff;
+		display: flex;
+		gap: 10px;
+		align-items: center;
+
+		&.blue {
+			color: $blue;
+		}
+
+		&.dark {
+			color: $dark;
+		}
+	}
+
+	&__subtitle {
+		color: $dark;
+		text-transform: uppercase;
+		@include adaptiveValue('font-size', 22, 18);
+		font-family: 'Source Sans 3', sans-serif;
+		padding-left: 40px;
+		margin-top: 10px;
+		max-width: 500px;
+
+		&.white {
+			color: $white;
+		}
+	}
+
+	&__item {
+		&:not(:first-child) {
+			margin-top: 50px;
+		}
+	}
+}
+
+@import 'section-hero';
+@import 'section-route';
+@import 'section-advantages';
+@import 'section-prices';
+@import 'section-includes';
+@import 'section-liner';
+@import 'section-coordinator';
+@import 'section-reviews';

@@ -1,0 +1,81 @@
+@use 'sass:math';
+// mixins
+
+// ADAPTIVE FONT
+@mixin adaptiveValue($property, $pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$maxWidth: $maxWidth - 320;
+	#{$property}: calc(
+		#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth})
+	);
+}
+// Using: @include adaptiveValue('width', 300, 400);
+
+// MEDIA
+@mixin media($maxWidth) {
+	@media (max-width: ($maxWidth + px)) {
+		@content;
+	}
+}
+// Using: @include media(num) {}
+
+@mixin _1170 {
+	@media (max-width: 1170px) {
+		@content;
+	}
+}
+@mixin _979 {
+	@media (max-width: 979px) {
+		@content;
+	}
+}
+@mixin _768 {
+	@media (max-width: 768px) {
+		@content;
+	}
+}
+@mixin _600 {
+	@media (max-width: 600px) {
+		@content;
+	}
+}
+@mixin _480 {
+	@media (max-width: 480px) {
+		@content;
+	}
+}
+@mixin _360 {
+	@media (max-width: 360px) {
+		@content;
+	}
+}
+// Using: @include _1170 {}
+
+// TRIANGLE
+@mixin triangle($color, $direction, $size) {
+	position: absolute;
+	width: 0;
+	height: 0;
+	@if $direction == down {
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-top: $size solid $color;
+		margin-top: 0 - round(calc($size / 2.5));
+	} @else if $direction == up {
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-bottom: $size solid $color;
+		margin-bottom: 0 - round(calc($size / 2.5));
+	} @else if $direction == right {
+		border-top: $size solid transparent;
+		border-bottom: $size solid transparent;
+		border-left: $size solid $color;
+		margin-right: -$size;
+	} @else if $direction == left {
+		border-top: $size solid transparent;
+		border-bottom: $size solid transparent;
+		border-right: $size solid $color;
+		margin-left: -$size;
+	}
+}
+// Using: @include triangle(red, right, 10px)

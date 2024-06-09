@@ -1,0 +1,13 @@
+// colors
+$white: #fff;
+$dark: #353535;
+$yellow: #FFC614;
+$blue: #0061BF;
+
+$minWidth: 320;
+$maxWidth: 1920; // Ширина полотна (макета)
+
+// container
+$maxContainerWidth: 1160px;
+$containerPadding: 10px; // с одной стороны
+$containerWidth: $maxContainerWidth + $containerPadding * 2;

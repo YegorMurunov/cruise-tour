@@ -1,0 +1,256 @@
+.section-liner {
+	// .section-liner__hero
+
+	&__hero {
+		display: flex;
+		justify-content: center;
+		align-items: stretch;
+		gap: 40px;
+		flex-wrap: wrap;
+	}
+
+	&__cabins {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 50px;
+		@include adaptiveValue('gap', 50, 40);
+	}
+}
+.liner-hero {
+	// .liner-hero__img
+
+	&__img {
+		width: 100%;
+		max-width: 360px;
+		height: 100%;
+	}
+
+	// .liner-hero__text
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		@include adaptiveValue('font-size', 16, 14);
+		max-width: 360px;
+		gap: 15px;
+		overflow-x: hidden;
+
+		ul {
+			list-style: none;
+
+			// margin-top: 10px;
+
+			li {
+				padding-left: 15px;
+				position: relative;
+
+				&::before {
+					content: '';
+					position: absolute;
+					top: 5px;
+					left: 0;
+					width: 10px;
+					height: 10px;
+					background-color: $blue;
+					border-radius: 100%;
+				}
+
+				&:not(:last-child) {
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+
+	// .liner-hero__anim-item
+	&__anim-item {
+		max-width: 100%;
+		margin-top: auto;
+	}
+}
+.liner-data {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	gap: 25px;
+	// padding-left: 120px;
+	@include adaptiveValue('padding-left', 160, 80);
+	@media (max-width: 1000px) {
+		padding-left: 0;
+	}
+
+	// .liner-data__item
+
+	&__item {
+		background: $blue;
+		padding: 20px 35px;
+		width: 200px;
+		position: relative;
+
+		color: $white;
+		text-align: center;
+
+		span {
+			@include adaptiveValue('font-size', 36, 26);
+		}
+	}
+	&__animItem {
+		position: absolute;
+		top: 52px;
+		left: -160px;
+		@include adaptiveValue('left', -160, -80);
+		@media (max-width: 1000px) {
+			display: none;
+		}
+
+		&.animItem2 {
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		&.animItem3 {
+			top: -25px;
+		}
+	}
+}
+
+.liner-video {
+	width: 100%;
+	position: relative;
+	cursor: pointer;
+
+	img,
+	iframe {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 16 / 9;
+		vertical-align: top;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100px;
+		height: 100px;
+		@include adaptiveValue('width', 100, 50);
+		@include adaptiveValue('height', 100, 50);
+		background-color: rgba(255, 255, 255, 0.6);
+		backdrop-filter: blur(4px);
+		border-radius: 100%;
+		overflow: hidden;
+		cursor: pointer;
+		pointer-events: none;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		@include triangle($white, right, 15px);
+		cursor: pointer;
+		pointer-events: none;
+		transition: transform 0.3s ease;
+	}
+
+	&.load {
+		&::after,
+		&::before {
+			display: none;
+		}
+	}
+}
+.liner-cabins {
+	// .liner-cabins__item
+
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		@include adaptiveValue('gap', 100, 20);
+		position: relative;
+
+		&:nth-child(even) {
+			.liner-cabins__img {
+				order: 2;
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: -150px;
+				left: 50%;
+				@include adaptiveValue('width', 340, 300);
+				@include adaptiveValue('height', 340, 300);
+				// @include adaptiveValue('top', -150, -100);
+				transform: translate(-50%, 0);
+				background: url('@img/liner-decor.png') center / contain no-repeat;
+				z-index: -1;
+			}
+		}
+
+		@media (max-width: 800px) {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			.liner-cabins__img {
+				order: 1;
+			}
+		}
+	}
+
+	// .liner-cabins__img
+
+	&__img {
+		width: 50%;
+		picture,
+		img {
+			width: 100%;
+		}
+		@media (max-width: 800px) {
+			max-width: 560px;
+			width: 100%;
+		}
+	}
+
+	// .liner-cabins__text
+
+	&__text {
+		// min-width: 300px;
+		padding-top: 50px;
+		// flex: 1 1 auto;
+		width: 50%;
+		font-weight: 400;
+		@include adaptiveValue('font-size', 16, 14);
+
+		@media (max-width: 800px) {
+			padding-top: 0;
+			max-width: 560px;
+			width: 100%;
+		}
+
+		p {
+			&:not(:last-child) {
+				@include adaptiveValue('margin-bottom', 25, 15);
+			}
+		}
+	}
+
+	// .liner-cabins__title
+
+	&__title {
+		font-family: 'Playfair Display', sans-serif;
+		color: #000;
+		@include adaptiveValue('margin-bottom', 30, 20);
+		@include adaptiveValue('font-size', 32, 22);
+	}
+}

@@ -1,0 +1,21 @@
+@use 'sass:math';
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@400;700&display=swap');
+
+@import 'modules/nullstyle';
+@import 'modules/vars';
+@import 'mixins/mixins';
+@import 'modules/components';
+// @import 'fonts';
+@import 'modules/aos'; // aos
+
+// header =========================================
+@import 'modules/header';
+
+// content =========================================
+@import 'modules/main';
+
+// footer =========================================
+@import 'modules/footer';
+
+// popups
+@import 'modules/popups';

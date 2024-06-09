@@ -1,0 +1,18 @@
+.animWrapper {
+	.circleInside {
+		transform-box: fill-box;
+		transform-origin: center;
+	}
+}
+.animWrapper {
+	svg .circleInside {
+		transform: scale(0);
+	}
+	&.anim {
+		svg .circleInside {
+			transform: scale(1);
+			transition: transform 0.4s ease-in-out;
+			transition-delay: inherit;
+		}
+	}
+}

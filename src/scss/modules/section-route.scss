@@ -1,0 +1,372 @@
+.section-route {
+	// .section-route__container
+
+	// &__container {
+	// }
+
+	// .section-route__itemMap
+
+	&__itemMap {
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		gap: 40px;
+		// flex-wrap: wrap;
+
+		@media (max-width: 900px) {
+			flex-direction: column;
+		}
+	}
+
+	// .section-route__img
+
+	&__img {
+		max-width: 100%;
+		// width: auto;
+		height: auto;
+		img {
+			width: 100%;
+		}
+		@media (max-width: 900px) {
+			width: 100%;
+		}
+	}
+
+	// .section-route__info
+
+	&__info {
+		flex: 1 1 auto;
+	}
+
+	// .section-route__breadCrumbs
+
+	&__breadCrumbs {
+		font-size: 16px;
+		font-weight: 700;
+		font-family: 'Playfair Display', sans-serif;
+		margin-bottom: 35px;
+	}
+
+	// .section-route__plates
+
+	&__plates {
+		// display: flex;
+		// gap: 30px;
+		// flex-wrap: wrap;
+		display: grid;
+		grid-template-columns: repeat(
+			2,
+			minmax(180px, 230px)
+		); // будет 3 колонки одной ширины
+		grid-template-rows: repeat(2, 100px); // будет 3 строки высотой 100px
+		row-gap: 42px;
+		column-gap: 98px;
+
+		@media (max-width: 1090px) {
+			display: flex;
+			gap: 30px;
+			flex-wrap: wrap;
+		}
+	}
+}
+.route-plates {
+	// .route-plates__item
+	@media (max-width: 1184px) {
+		overflow: hidden;
+	}
+
+	&__item {
+		width: 100%;
+		background-color: $blue;
+		color: $white;
+		padding: 20px 16px;
+		font-size: 16px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		min-height: 100px;
+		position: relative;
+
+		&.item2 {
+			grid-row: 2;
+		}
+		&.item3 {
+			grid-row: 2;
+			// min-width: 230px;
+		}
+	}
+
+	// .route-plates__text
+
+	&__text {
+		font-size: 16px;
+	}
+
+	// .route-plates__union
+
+	&__union {
+		pointer-events: none;
+		@media (max-width: 1090px) {
+			display: none;
+		}
+		position: absolute;
+		&.union1 {
+			top: 10%;
+			// transform: translateY(-50%);
+			right: -184px;
+		}
+		&.union2 {
+			top: -105px;
+			// transform: translateY(-50%);
+			right: -325px;
+			z-index: 4;
+		}
+		// &.union3 {
+		// }
+	}
+}
+
+.route-tabs {
+	border: 1px solid $blue;
+	display: flex;
+	justify-content: stretch;
+	align-items: flex-start;
+	height: 600px;
+
+	@media (max-width: 620px) {
+		flex-direction: column;
+		height: 100%;
+	}
+
+	// .route-tabs__head
+
+	&__head {
+		// min-width: 250px;
+		width: auto;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		position: relative;
+		padding: 0 15px;
+		border-right: 1px solid $blue;
+		@media (max-width: 620px) {
+			width: 100%;
+			border-right: 0 solid $blue;
+			border-bottom: 1px solid $blue;
+		}
+	}
+
+	// .route-tabs__link
+
+	&__link {
+		// flex: 1 1 auto;
+		height: calc(600px / 10);
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-direction: row;
+		padding-right: 45px;
+		position: relative;
+		white-space: nowrap;
+		cursor: pointer;
+		font-family: 'Source Sans 3', sans-serif;
+		font-weight: 400;
+		font-size: 14px;
+
+		&:not(:last-child) {
+			border-bottom: 1px solid $blue;
+		}
+
+		&:hover {
+			&::before {
+				right: -5px;
+			}
+		}
+		&.active {
+			&::before {
+				right: 0;
+				transform: scale(1.5) translateY(-48%);
+			}
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: 0;
+			width: 25px;
+			height: 8px;
+			background: url('@img/arrow.svg') center/100% 100% no-repeat;
+			transform: translateY(-50%);
+			transition: right 0.2s ease-in-out, transform 0.2s ease-in-out;
+		}
+
+		b {
+			font-family: 'Source Sans 3', sans-serif;
+			font-size: 16px;
+			font-weight: 700;
+			margin-right: 18px;
+			white-space: nowrap;
+		}
+	}
+
+	// .route-tabs__content
+
+	&__content {
+		flex: 1 1 auto;
+		padding: 30px 50px;
+		@include adaptiveValue('padding-right', 50, 30);
+		@include adaptiveValue('padding-left', 50, 30);
+		@include adaptiveValue('padding-top', 30, 15);
+		@include adaptiveValue('padding-bottom', 30, 15);
+		height: 100%;
+		// min-width: 350px;
+		// overflow: hidden;
+
+		@media (max-width: 620px) {
+			min-width: auto;
+		}
+	}
+
+	// .route-tabs__item
+
+	&__item {
+		display: none;
+		font-family: 'Source Sans 3', sans-serif;
+		flex-direction: column;
+		height: 100%;
+
+		&.active {
+			display: flex;
+		}
+	}
+}
+.route-tabs-item {
+	// .route-tabs-item__title
+
+	&__title {
+		@include adaptiveValue('font-size', 24, 18);
+		margin-bottom: 10px;
+	}
+
+	// .route-tabs-item__date
+
+	&__date {
+		@include adaptiveValue('font-size', 16, 14);
+		margin-bottom: 5px;
+	}
+
+	// .route-tabs-item__departure
+
+	&__departure_date {
+		@include adaptiveValue('font-size', 16, 14);
+		margin-bottom: 20px;
+	}
+
+	// .route-tabs-item__text
+
+	&__text {
+		flex: 1 1 auto;
+		@include adaptiveValue('font-size', 16, 14);
+		overflow: auto;
+		width: 100%;
+
+		p {
+			&:not(:first-child) {
+				margin-top: 15px;
+			}
+		}
+	}
+
+	// .route-tabs-item__additionalinfo
+
+	&__additionalinfo {
+		margin-top: 20px;
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+}
+.route-tab-addInfo {
+	// .route-tab-addInfo__text
+
+	&__text {
+		@include adaptiveValue('font-size', 16, 14);
+		color: #000;
+		max-width: 280px;
+	}
+}
+
+.route-full {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 30px;
+	font-family: 'Source Sans 3', sans-serif;
+	width: 100%;
+	flex-wrap: wrap;
+
+	// .route-full__left
+
+	&__left {
+		display: block;
+	}
+
+	// .route-full__title
+
+	&__title {
+		@include adaptiveValue('font-size', 24, 18);
+	}
+
+	// .route-full__text
+
+	&__text {
+		margin-top: 5px;
+		@include adaptiveValue('font-size', 16, 14);
+	}
+
+	// .route-full__right
+
+	&__right {
+		flex: 1 1 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include adaptiveValue('gap', 30, 20);
+		flex-wrap: wrap;
+	}
+
+	// .route-full__input
+
+	&__input {
+		min-width: 280px;
+		// max-width: 360px;
+		padding: 15px 20px;
+		outline: none;
+		border: 1px solid $blue;
+		flex: 1 1 auto;
+		display: flex;
+		font-family: 'Source Sans 3', sans-serif;
+		@include adaptiveValue('font-size', 18, 16);
+		font-weight: 700;
+
+		&::placeholder {
+			font-family: 'Source Sans 3', sans-serif;
+			@include adaptiveValue('font-size', 18, 16);
+			font-weight: 700;
+			color: $dark;
+			opacity: 0.5;
+		}
+	}
+
+	// .route-full__btn
+
+	&__btn {
+		min-width: 260px;
+		// max-width: 360px;
+		flex: 1 1 auto;
+	}
+}

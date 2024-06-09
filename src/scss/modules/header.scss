@@ -1,0 +1,150 @@
+.header {
+	position: absolute;
+	z-index: 4;
+	width: 100%;
+	top: 0;
+	left: 0;
+	padding: 50px 0;
+
+	@media (max-width: 991px) {
+		position: absolute;
+		padding: 20px 0;
+		background: transparent;
+		transition: background 0.2s ease-in-out;
+
+		&.fixed {
+			position: fixed;
+			background: rgba(0, 97, 191, 0.8);
+			backdrop-filter: blur(2px);
+			animation: headerFixed 0.5s ease-in-out 0s;
+			transition: background 0.2s ease-in-out, backdrop-filter 0.2s ease-in-out;
+			&.open {
+				background: transparent;
+				backdrop-filter: blur(0);
+			}
+		}
+
+		@keyframes headerFixed {
+			0% {
+				top: -100%;
+			}
+			100% {
+				top: 0;
+			}
+		}
+	}
+
+	// .header__container
+
+	&__container {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+
+		@media (max-width: 991px) {
+			justify-content: space-between;
+		}
+	}
+
+	// .header__soc
+
+	&__soc {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 25px;
+	}
+
+	&__menu-body {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100vh;
+		height: calc(var(--vh, 1vh) * 100);
+		left: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		transform: translate(-100%, 0);
+		background: rgba(0, 97, 191, 0.8);
+		backdrop-filter: blur(4px);
+		overflow: auto;
+		transition: transform 0.2s ease-in-out, backdrop-filter 0.2s ease-in-out;
+	}
+
+	&.open {
+		.header__menu-body {
+			transform: translate(0, 0);
+		}
+	}
+}
+.header-soc {
+	// .header-soc__item
+
+	&__item {
+		width: 25px;
+		height: 25px;
+		transition: transform 0.2s ease-in-out;
+
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}
+
+// кнопка для вызова бургера - .header__menu-btn
+// тело меню бургера - .header__menu-body
+
+// burger
+.header__menu-btn {
+	position: relative;
+	display: block;
+	width: 40px;
+	height: 25px;
+	cursor: pointer;
+	display: none;
+
+	@media (max-width: 991px) {
+		display: block;
+	}
+
+	span {
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		background-color: $white;
+		transition-property: top transform width;
+		transition-duration: 0.2s;
+		transition-timing-function: ease-in-out;
+		transition-delay: 0s;
+
+		&:nth-child(1) {
+			top: 0;
+		}
+		&:nth-child(2) {
+			top: 50%;
+			transform: translate(0, -50%);
+		}
+		&:nth-child(3) {
+			top: 100%;
+			transform: translate(0, -100%);
+		}
+	}
+
+	&.active {
+		span {
+			&:nth-child(1) {
+				top: 50%;
+				transform: translate(0, -50%) rotate(45deg);
+			}
+			&:nth-child(2) {
+				width: 0;
+			}
+			&:nth-child(3) {
+				top: 50%;
+				transform: translate(0, -50%) rotate(-45deg);
+			}
+		}
+	}
+}

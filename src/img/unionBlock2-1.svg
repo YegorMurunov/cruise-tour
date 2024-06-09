@@ -1,0 +1,39 @@
+<svg
+	width="206"
+	height="70"
+	viewBox="0 0 206 70"
+	fill="none"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<line x1="46" y1="42.5" x2="144" y2="42.5" stroke="#0061BF"/>
+	<line x1="143.5" y1="43" x2="143.5" y2="10" stroke="#0061BF"/>
+	<line x1="143" y1="9.5" x2="187" y2="9.5" stroke="#0061BF"/>
+	<circle cx="197" cy="10" r="9.5" stroke="#0061BF"/>
+	<circle
+		class="circleInside"
+		cx="197"
+		cy="10"
+		r="6"
+		fill="#0061BF"
+	/>
+	<g>
+		<circle
+			cx="23"
+			cy="43"
+			r="23"
+			fill="#0061BF"
+			fill-opacity="0.3"
+		/>
+	</g>
+	<circle cx="23.0001" cy="43" r="18.4" fill="#0061BF"/>
+	<g>
+		<circle
+			cx="23"
+			cy="43"
+			r="11.5"
+			fill="white"
+			fill-opacity="0.3"
+		/>
+	</g>
+	<circle cx="22.9999" cy="43" r="4.1" stroke="#F4F4F4"/>
+</svg>
